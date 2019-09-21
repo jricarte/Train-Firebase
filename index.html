@@ -1,15 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <title>Train Schedule</title>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1>The Best Train Schedule Ever</h1>
+        <p> Find your train times! </p>
+    </div>
+
+    <div class="panel panel-primary">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Train Schedule</div>
+
+
+        <!-- Table -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th> Train Name </th>
+                    <th> Destination </th>
+                    <th> Frequency </th>
+                    <th> Next Arrival </th>
+                    <th> Minutes Away </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="panel panel-primary">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Add A Train</div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="idlink"> Train Name </label>
+                <input type="email" class="form-control" id="idlink" placeholder="Enter Train Name Here">
+            </div>
+
+            <div class="form-group">
+                <label for="idlink2">Destination</label>
+                <input type="password" class="form-control" id="idlink2" placeholder="Where To">
+            </div>
+
+            <div class="form-group">
+                <label for="idlink3"> First Train Time (HH:mm - military Time)</label>
+                <input type="password" class="form-control" id="idlink3" placeholder="00:00">
+            </div>
+
+            <div class="form-group">
+                <label for="idlink4">Frequency</label>
+                <input type="password" class="form-control" id="idlink4" placeholder="x min">
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase.js"></script>
     <script src="assets/javascript/app.js"></script>
 </body>
+
 </html>
