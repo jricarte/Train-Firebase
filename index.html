@@ -14,21 +14,19 @@
     <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-database.js"></script>
 
-    <title>Train Schedule</title>
+  <title>Train Schedule</title>
 </head>
-
 <body>
     <div class="jumbotron">
-        <h1>The Best Train Schedule Ever</h1>
-        <p> Find your train times! </p>
+        <h1>The Best Train Scheduler Ever</h1>
+        <p> See when your train comes next! </p>
+        <p id="time"></p>
     </div>
 
     <div class="panel panel-primary">
-        <!-- Default panel contents -->
+
         <div class="panel-heading">Train Schedule</div>
 
-
-        <!-- Table -->
         <table class="table">
             <thead>
                 <tr>
@@ -39,46 +37,42 @@
                     <th> Minutes Away </th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
+            <tbody id="table-info">     
+                <!-- Firebase data goes into this table -->
             </tbody>
         </table>
     </div>
 
+
     <div class="panel panel-primary">
-        <!-- Default panel contents -->
         <div class="panel-heading">Add A Train</div>
         <div class="panel-body">
             <div class="form-group">
-                <label for="idlink"> Train Name </label>
-                <input type="email" class="form-control" id="idlink" placeholder="Enter Train Name Here">
+                <label for="trainNameInput"> Train Name </label>
+                <input type="text" class="form-control" id="trainNameInput" placeholder="Enter Train Name Here"/>
             </div>
 
             <div class="form-group">
-                <label for="idlink2">Destination</label>
-                <input type="password" class="form-control" id="idlink2" placeholder="Where To">
+                <label for="destinationInput">Destination</label>
+                <input type="text" class="form-control" id="destinationInput" placeholder="Where To"/>
             </div>
 
             <div class="form-group">
-                <label for="idlink3"> First Train Time (HH:mm - military Time)</label>
-                <input type="password" class="form-control" id="idlink3" placeholder="00:00">
+                <label for="firstTrainTimeInput"> First Train Time (HH:mm - Military Time)</label> <br>
+                <input type="time" class="form-control" id="firstTrainTimeInput" placeholder="00:00"/>
             </div>
 
             <div class="form-group">
-                <label for="idlink4">Frequency</label>
-                <input type="password" class="form-control" id="idlink4" placeholder="x min">
+                <label for="frequencyInput">Frequency</label>
+                <input type="number" class="form-control" id="frequencyInput" placeholder="Enter Value Of Minutes (Not 0)"/>
             </div>
+
+            <button type="submit" class="btn btn-primary" id="submitButton" >Submit</button>
+
         </div>
-
-
     </div>
 
+    <script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js"
         integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="assets/javascript/app.js"></script>
